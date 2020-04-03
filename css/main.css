@@ -16,6 +16,9 @@ a:link,a:visited,:a:hover,a:active{
     text-decoration : none;
 }
 
+/*
+  header
+*/
 .top{
     padding : 170px 30px 100px;
 }
@@ -36,7 +39,16 @@ a:link,a:visited,:a:hover,a:active{
     font-size : 5rem;
 }
 
+.heading{
+    display : inline-block;
+    font-size : 3rem;
+    margin : 10px;
+    letter-spacing : 1px;
+}
 
+/*
+  global-navigation
+*/
 .global-nav{
     /*position : fixed;*/
     text-align : center;
@@ -59,4 +71,27 @@ a:link,a:visited,:a:hover,a:active{
 }
 .global-nav .nav-item a:hover{
     color : rgba(255,255,255,0.8);
+}
+
+/*
+ about introduce my profile
+*/
+.about{
+    margin : 100px 0px;
+}
+.text-wrapper{
+    margin : 20px 30px;
+}
+.about-text tr{
+    font-size : 1.5em;
+}
+.about-text tr th{
+    text-align : right;
+    width : 33%;
+    padding : 10px 30px 10px 0;
+}
+.about-text tr td{
+    text-align : left;
+    width : 66%;
+    padding : 10px 0;
 }
