@@ -2,16 +2,21 @@
 
 html{
     font-size : 62.5%;
-}
-*,*::before,*::after{
-    box-sizing : border-box;
-}
-body {
+  }
+  body{
+    color : #333;
+    font-size : 1.2rem;
+    font-family : "Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
     text-align : center;
-    font-size : 1.4rem;
-    font-family :　"HiraginoKaku Gothic ProN",Meiryo,Sans-serif;
-    background-color : #dedede;
-}
+  }
+  *,*::before,*::after{
+    box-sizing : border-box;
+  }
+  a:link,a:visited,a:hover,a:active{
+    color : #d03c56;
+    text-decoration : none;
+  }
+  
 a:link,a:visited,a:hover,a:active{
     color : #d03c56;
     text-decoration : none;
@@ -19,8 +24,23 @@ a:link,a:visited,a:hover,a:active{
 .heading{
     display : inline-block;
     font-size : 3rem;
-    margin : 10px;
+    margin : 10px auto;
     letter-spacing : 1px;
+}
+.heading::after,.heading::before{
+    content : "";
+    display : inline-block;
+    width : 140px;
+    height : 2px;
+    margin : 0 30px;
+    background-color : #000;
+    vertical-align : middle;
+}
+.border{
+    padding : 8px;
+     border : 1px solid gray;
+     border-radius : 15px;
+     box-shadow : 0px 0px 5px -1px rgba(0,0,0,0.3);
 }
 
 /* -------------
@@ -35,7 +55,7 @@ a:link,a:visited,a:hover,a:active{
     font-size : 2rem;
 }
 .site-title-sub::before,.site-title-sub::after{
-    content : "🎵";
+    content : "";
     display : inline-block;
     vertical-align : middle;
     margin : 0 20px;
@@ -101,23 +121,21 @@ a:link,a:visited,a:hover,a:active{
  * skills
  * ----------------------*/
  .skills{
-     margin : 50px 0px;
+     margin : 100px 0px;
  }
  .skills-wrapper{
-     margin : 50px;
+     width : 100%;
+     margin : 50px 0px;
      display : table;
      border-spacing : 20px 5px;
+     table-layout : fixed;
  }
  .skill-box{
      display : table-cell;
-     width : 30%;
-     padding : 8px;
-     border : 1px solid #000;
-     border-radius : 8px;
-     background-color : #fff;
  }
  .skill-title{
-     font-size : 1.5rem;
+     display : inline-block;
+     font-size : 1.3rem;
      margin : 15px auto 15px;
      letter-spacing : 1px;
  }
@@ -127,4 +145,46 @@ a:link,a:visited,a:hover,a:active{
      text-align : left;
  }
  
- 
+ /* ----------------------
+  * works
+  * ----------------------*/
+  .works{
+      margin : 100px 0;
+  }
+  .work-box{
+      display : flex;
+      justify-content : space-between;
+      /*width : 40%;*/
+      margin : 10px 30px 10px;
+      padding : 40px;
+  }
+  .work-image{
+      width : 45%;
+      height : 100%;
+  }
+  .work-introduce{
+      width : 45%;
+      text-align : left;
+  }
+  .work-title{
+      display : block;
+      height : 30%;
+      font-size : 2em;
+      line-height : 1.5em;
+      text-decoration : underline;
+  }
+  .work-explaination{
+      font-size : 1.2rem;
+      height : 70%;
+      line-height : 1.5rem;
+  }
+
+  /* ----------------------
+   * footer
+   * ----------------------*/
+.footer{
+    padding : 12px 0;
+    font-size : 1.3rem;
+    background-color : rgba(0,0,0,0.6);
+    color : #fff;
+}
