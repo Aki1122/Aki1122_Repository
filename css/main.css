@@ -169,12 +169,12 @@ a:link,a:visited,a:hover,a:active{
   .work-title{
       display : block;
       height : 30%;
-      font-size : 2em;
+      font-size : 3vw;
       line-height : 1.5em;
       text-decoration : underline;
   }
   .work-explaination{
-      font-size : 1.2rem;
+      font-size : 2vw;
       height : 70%;
       line-height : 1.5rem;
   }
