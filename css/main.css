@@ -4,7 +4,6 @@ html{
     font-size : 62.5%;
   }
   body{
-    color : #333;
     font-size : 1.2rem;
     font-family : "Hiragino Kaku Gothic ProN",Meiryo,sans-serif;
     text-align : center;
@@ -27,15 +26,7 @@ a:link,a:visited,a:hover,a:active{
     margin : 10px auto;
     letter-spacing : 1px;
 }
-.heading::after,.heading::before{
-    content : "";
-    display : inline-block;
-    width : 140px;
-    height : 2px;
-    margin : 0 30px;
-    background-color : #000;
-    vertical-align : middle;
-}
+
 .border{
     padding : 8px;
      border : 1px solid gray;
@@ -47,12 +38,13 @@ a:link,a:visited,a:hover,a:active{
  * header
  * -------------*/
 .top{
-    padding : 170px 30px 100px;
+    padding : 170px 30px 170px;
+    background : linear-gradient(45deg, rgb(110, 119, 224),rgb(175, 220, 238))
 }
 .site-title-sub{
     margin : 0 0 30px;
     letter-spacing : 1px;
-    font-size : 2rem;
+    font-size : 3rem;
 }
 .site-title-sub::before,.site-title-sub::after{
     content : "";
@@ -97,13 +89,13 @@ a:link,a:visited,a:hover,a:active{
  * about introduce my profile
  * --------------------------*/
 .about{
-    margin : 100px 0px;
+    padding : 50px 0;
 }
 .text-wrapper{
     margin : 20px 30px;
 }
 .about-text tr{
-    font-size : 1.5em;
+    font-size : 2vw;
     line-height : 50px;
 }
 .about-text tr th{
@@ -121,7 +113,8 @@ a:link,a:visited,a:hover,a:active{
  * skills
  * ----------------------*/
  .skills{
-     margin : 100px 0px;
+     padding : 50px 0;
+     background-color : #f2f2f2;
  }
  .skills-wrapper{
      width : 100%;
@@ -131,7 +124,9 @@ a:link,a:visited,a:hover,a:active{
      table-layout : fixed;
  }
  .skill-box{
+    background-color : #fff;
      display : table-cell;
+     margin : 20px;
  }
  .skill-title{
      display : inline-block;
@@ -149,7 +144,7 @@ a:link,a:visited,a:hover,a:active{
   * works
   * ----------------------*/
   .works{
-      margin : 100px 0;
+      padding : 50px 0;
   }
   .work-box{
       display : flex;
@@ -170,21 +165,68 @@ a:link,a:visited,a:hover,a:active{
       display : block;
       height : 30%;
       font-size : 3vw;
-      line-height : 1.5em;
+      line-height : 3vw;
       text-decoration : underline;
   }
   .work-explaination{
-      font-size : 2vw;
       height : 70%;
-      line-height : 1.5rem;
+      font-size : 2vw;
+      line-height : 2.5vw;
   }
 
   /* ----------------------
    * footer
    * ----------------------*/
 .footer{
+    width : 100%;
     padding : 12px 0;
     font-size : 1.3rem;
     background-color : rgba(0,0,0,0.6);
     color : #fff;
 }
+
+/* ------------------------
+ * media query
+ * ------------------------*/
+ @media (max-width : 768px)
+ {
+    .top{
+        padding : 60px 30px 100px;
+    }
+    .site-title-sub{
+        font-size : 1.2rem;
+    }
+    .site-title{
+        font-size : 3rem;
+    }
+
+    .about-text tr{
+        font-size : 4vw;
+        line-height : 30px;
+    }
+
+    .skill-box{
+        display : block;
+    }
+
+    .work-box{
+        display : block;
+        padding : 20px;
+    }
+    .work-image{
+        width : 100%;
+    }
+    .work-introduce{
+        width : 100%;
+    }
+    .work-title{
+        margin : 20px 0;
+        font-size : 1.2rem;
+        line-height : 1.2em;
+    }
+    .work-explaination{
+        font-size : 0.8rem;
+        line-height : 1rem;
+    }
+ }
+
