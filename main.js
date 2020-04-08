@@ -14,6 +14,14 @@ $window.scroll(function(){
     }
 });
 
+$(".global-nav a[href^='#'").click(function(e){
+    let speed_ms = 600;
+    let target = $(e.currentTarget).attr("href");
+    let position = $(target).offset().top;
+    $("body,html").animate({scrollTop : position},speed_ms,"swing");
+    return false;
+});
+
 $(".animated").waypoint({
     handler(direction){
         if(direction === "down")
